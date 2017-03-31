@@ -1,6 +1,6 @@
 (function() {
 	function ChatroomCtrl(Room) {
-		this.rooms = Room(config.databaseURL);
+		this.rooms = Room();
     };
 
 	angular

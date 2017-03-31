@@ -10,7 +10,7 @@
 			.state('chatroom', {
 				url: '/',
 				controller: 'ChatroomCtrl as chatroom',
-				templateUrl: '/template/index.html'
+				templateUrl: '/index.html'
 		});
 	}
 	

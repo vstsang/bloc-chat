@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='blocChat'>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>	
-	<ul ng-repeat="room in chatroom.rooms">
+	<ul ng-repeat="room in rooms">
 		<li><a class="active" href="#home">Bloc Chat</a></li>
 		<li>{{ room }}</li>
 	</ul>
@@ -15,13 +15,13 @@
 	<div style="margin-left:25%;padding:1px 16px;height:1000px;">
 	</div>
 	
-	<!-- Angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<!-- AngularFire -->
 	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-	<!-- Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-	<script src="scripts/app.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	<script src="/scripts/app.js"></script>
+	<script src="/scripts/controllers/ChatroomCtrl.js"></script>
+	<script src="/scripts/Services/Room.js"></script>
 	<script>
  	// Initialize Firebase
   		var config = {
