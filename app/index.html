@@ -2,28 +2,36 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <title>Bloc Chat</title>
+	<link href='//fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
-    <script src="/scripts/app.js"></script>
+<body>	
+	<ul ng-repeat="room in chatroom.rooms">
+		<li><a class="active" href="#home">Bloc Chat</a></li>
+		<li>{{ room }}</li>
+	</ul>
+
+	<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+	</div>
+	
 	<!-- Angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<!-- AngularFire -->
 	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
 	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
-	<script src="/scripts/Room.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+	<script src="scripts/app.js"></script>
 	<script>
-		// Initialize Firebase
-		var config = {
+ 	// Initialize Firebase
+  		var config = {
 			apiKey: "AIzaSyB9YIine8CXvC5VT3sD5wqcyU-CU2wloxs",
 			authDomain: "blocchat-137b6.firebaseapp.com",
 			databaseURL: "https://blocchat-137b6.firebaseio.com",
 			storageBucket: "blocchat-137b6.appspot.com",
 			messagingSenderId: "86333220486"
-		};
-		firebase.initializeApp(config);
+  		};
+  		firebase.initializeApp(config);
 	</script>
 </body>
 </html>
