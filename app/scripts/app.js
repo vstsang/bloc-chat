@@ -10,11 +10,11 @@
 			.state('chatroom', {
 				url: '/',
 				controller: 'ChatroomCtrl as chatroom',
-				templateUrl: '/index.html'
+				templateUrl: '/templates/chatroom.html'
 		});
 	}
 	
 	angular
-		.module('blocChat', ['ui.router'])
+		.module('blocChat', ['ui.router', 'firebase'])
 		.config(config);
 })();
