@@ -9,6 +9,15 @@
 // and inject the  $firebaseArray service
 		var ref = firebase.database().ref().child("rooms");	
 		var rooms = $firebaseArray(ref);
+
+/**
+* @function Room.addRoom
+* @desc Add room to firebaseArray
+*/	
+		Room.addRoom = function() {
+			rooms.$add({ name: "Room 8"});
+		};
+		
 		
 		return {
 			all: rooms
