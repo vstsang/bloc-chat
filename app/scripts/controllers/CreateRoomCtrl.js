@@ -10,9 +10,8 @@
 				animation: true,
 				templateUrl: 'createRoomModalContent.html',
 				controller: 'ModalInstanceCtrl',
-				controllerAs: '$ctrl',
+				controllerAs: '$ctrl'
 			});
-			
 		}
 	}
 	
@@ -22,10 +21,14 @@
 })();
 
 (function() {
-	function ModalInstanceCtrl($uibModalInstance) {				
-		
-		this.ok = function() {
-			$uibModalInstance.close(this.roomName);
+/**
+* @function ModalInstanceCtrl
+* @desc Controller for the modal window
+*/
+	function ModalInstanceCtrl($uibModalInstance, Room) {				
+				
+		this.ok = function(roomName) {
+			$uibModalInstance.close(roomName);
 			Room.addRoom(roomName);
 		};
 		

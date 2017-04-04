@@ -13,9 +13,10 @@
 /**
 * @function addRoom
 * @desc Add room to firebaseArray
+* @param {String} roomName from chatroom.html
 */	
 		var addRoom = function(roomName) {
-			rooms.$add({ name: roomName});
+			rooms.$add({ name: roomName });
 		};
 		
 		return {
