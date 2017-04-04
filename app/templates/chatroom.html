@@ -12,10 +12,13 @@
 			<h3 class="modal-title">Create new room</h3>
 		</div>
         <div class="modal-body">
-        	Enter a room name
+        	<p>Enter a room name</p>
+			<form>
+     			<input type="text" ng-model="createRoom.roomName">
+			</form>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            <button class="btn btn-warning" ng-click="createRoom.cancel()">Cancel</button>
             <button class="btn btn-primary" ng-click="createRoom.ok()">Create room</button>
         </div>
     </script>

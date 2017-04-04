@@ -11,16 +11,16 @@
 		var rooms = $firebaseArray(ref);
 
 /**
-* @function Room.addRoom
+* @function addRoom
 * @desc Add room to firebaseArray
 */	
-		Room.addRoom = function() {
-			rooms.$add({ name: "Room 8"});
+		var addRoom = function(roomName) {
+			rooms.$add({ name: roomName});
 		};
 		
-		
 		return {
-			all: rooms
+			all: rooms,
+			addRoom: addRoom
 		};
 	}
 	
