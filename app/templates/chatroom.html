@@ -1,7 +1,7 @@
-<h1>Bloc Chat</h1>
+<h1>Bloc Chat</h1> 
 
 <ul>
-	<li ng-repeat="room in chatroom.rooms">
+	<li ng-repeat="room in chatroom.rooms" ng-click="chatroom.clickedRoom(room)"> 
 		{{ room.name }}
 	</li>
 </ul>
@@ -23,5 +23,22 @@
         </div>
     </script>
 	
-	<button class="btn" ng-click="createRoom.open('sm')">New Room</button>
+	<ul>
+		<li>
+			<button class="btn" ng-click="createRoom.open('sm')">New Room</button>
+		</li>
+	</ul>
+</div>
+
+<div class="messages">
+	<h2 > {{ clickRoom }} </h2>
+	<table ng-repeat="message in chatroom.messages">
+		<tr>
+			<td>
+				<span class="username">{{ message.username }}</span>
+				<span class="time">{{ message.sentAt }}</span><br />
+				<span class="message">{{ message.content }}</span>
+			</td>
+		</tr>
+	</table>
 </div>

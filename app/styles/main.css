@@ -1,13 +1,13 @@
 body {
 	font-family: 'Amiko';
-	font-size: 16px;
+	font-size: 13px;
     margin: 0;
 }
 
 ui-view {
     margin: 0;
     padding: 0;
-    width: 25%;
+    width: 20%;
     background-color: #F1F1F1;
     position: fixed;
     height: 100%;
@@ -25,4 +25,45 @@ h1 {
 	font-size: 24px;
 	font-weight: bold;
     color: white;
+	text-indent: 5px;
+}
+
+.messages {
+	margin: 0;
+    padding: 0;
+	width: 80%;
+    background-color: #FFFFFF;
+    position: fixed; 
+	left: 20%;
+	top: 10px;
+	height: 100%;
+    overflow: auto;
+	text-indent: 5px;
+}
+
+.username {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.time {
+	color: dimgray;
+	font-style: italic;
+}
+
+.message {
+	color: #797979;
+}
+
+table:nth-child(odd) {
+	background: #FFFFFF;
+}
+
+table:nth-child(even) {
+	background: #F1F1F1;
+}
+
+td {
+	width: 10%;
+	padding: 10px;
 }

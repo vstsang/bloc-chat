@@ -4,11 +4,16 @@
 * @desc Chatroom controller
 * @param {Object} Room service
 */	
-	function ChatroomCtrl(Room) {
+	function ChatroomCtrl(Room, Message) {
 		this.rooms = Room.all;
+		this.messages = Message.getByRoomId;
+		
+		var clickedRoom = function(room) {
+			return room.name;
+		};
     };
 
 	angular
 		.module('blocChat')
-		.controller('ChatroomCtrl', ['Room', ChatroomCtrl]);
+		.controller('ChatroomCtrl', ['Room', 'Message', ChatroomCtrl]);
 })();
