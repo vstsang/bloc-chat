@@ -6,10 +6,8 @@
 */	
 	function ChatroomCtrl(Room, Message) {
 		this.rooms = Room.all;
+		this.clickedRoom = Message.clickedRoom;
 		this.messages = Message.getByRoomId;
-		
-		this.clickedRoom = function(room) {
-			return room.name;		
     };
 
 	angular
