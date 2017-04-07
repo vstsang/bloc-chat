@@ -8,9 +8,8 @@
 		this.rooms = Room.all;
 		this.messages = Message.getByRoomId;
 		
-		var clickedRoom = function(room) {
-			return room.name;
-		};
+		this.clickedRoom = function(room) {
+			return room.name;		
     };
 
 	angular
