@@ -9,7 +9,7 @@
 			var modalInstance = $uibModal.open({
 				animation: true,
 				templateUrl: 'createRoomModalContent.html',
-				controller: 'ModalInstanceCtrl',
+				controller: 'RoomModalInstanceCtrl',
 				controllerAs: '$ctrl'
 			});
 		}
@@ -22,10 +22,10 @@
 
 (function() {
 /**
-* @function ModalInstanceCtrl
+* @function RoomModalInstanceCtrl
 * @desc Controller for the modal window
 */
-	function ModalInstanceCtrl($uibModalInstance, Room) {				
+	function RoomModalInstanceCtrl($uibModalInstance, Room) {				
 				
 		this.ok = function(roomName) {
 			$uibModalInstance.close(roomName);
@@ -39,5 +39,5 @@
 	
 	angular
 		.module('blocChat')
-		.controller('ModalInstanceCtrl', ['$uibModalInstance', 'Room', ModalInstanceCtrl]);
+		.controller('RoomModalInstanceCtrl', ['$uibModalInstance', 'Room', RoomModalInstanceCtrl]);
 })();
