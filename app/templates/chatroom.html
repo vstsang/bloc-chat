@@ -30,21 +30,7 @@
 	</ul>
 </div>
 
-<div class="messages">
-	<h2 > {{ chatroom.room.name }} </h2>
-	<table ng-repeat="message in chatroom.messages">
-		<tr>
-			<td>
-				<span class="username">{{ message.username }}</span>
-				<span class="time">{{ message.sentAt }}</span><br />
-				<span class="message">{{ message.content }}</span>
-			</td>
-		</tr>
-	</table>
-</div>
-
-<!--<div ng-controller="UsernameModalInstanceCtrl as $userctrl">-->
-<div>
+<div ng-controller="SetUsernameCtrl as setUsername">
 	<script type="text/ng-template" id="setUsernameModalContent.html">
 		<div class="modal-header">
 			<h3 class="modal-title">Set a usernam</h3>
@@ -59,4 +45,17 @@
             <button class="btn btn-primary" ng-click="$userctrl.ok(username)">Set username</button>
         </div>
     </script>	
+</div>
+
+<div class="messages">
+	<h2 > {{ chatroom.room.name }} </h2>
+	<table ng-repeat="message in chatroom.messages">
+		<tr>
+			<td>
+				<span class="username">{{ message.username }}</span>
+				<span class="time">{{ message.sentAt }}</span><br />
+				<span class="message">{{ message.content }}</span>
+			</td>
+		</tr>
+	</table>
 </div>

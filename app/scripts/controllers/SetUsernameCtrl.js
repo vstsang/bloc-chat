@@ -3,23 +3,14 @@
 * @function SetUsernameCtrl
 * @desc SetUsername modal controller
 */
-	function SetUsernameCtrl($uibModal) {
-		
-		this.open = function() {
-			var modalInstance = $uibModal.open({
-				animation: true,
-				templateUrl: 'setUsernameModalContent.html',
-				controller: 'UsernameModalInstanceCtrl',
-				controllerAs: '$userctrl'
-			});
-		}
+	function SetUsernameCtrl() {
+
 	}
 	
 	angular
 		.module('blocChat')
-		.controller('SetUsernameCtrl', ['$uibModal', SetUsernameCtrl]);
+		.controller('SetUsernameCtrl', [SetUsernameCtrl]);
 })();
-
 
 (function() {
 /**
