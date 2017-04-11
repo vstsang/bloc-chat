@@ -20,7 +20,7 @@
 	function UsernameModalInstanceCtrl($uibModalInstance, BlocChatCookies) {				
 		
 		this.ok = function(username) {
-			$uibModalInstance.close(username);
+			$uibModalInstance.close('success');
 			BlocChatCookies.putUsername(username);
 		};
 		

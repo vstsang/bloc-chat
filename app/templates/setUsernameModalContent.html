@@ -1,0 +1,14 @@
+<div ng-controller="SetUsernameCtrl as setUsername">
+		<div class="modal-header">
+			<h3 class="modal-title">Set a username</h3>
+		</div>
+        <div class="modal-body">
+        	<p>This name will apear when you send messages</p>
+			<form>
+     			<input type="text" ng-model="username">
+			</form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="$userctrl.ok(username)">Set username</button>
+        </div>
+</div>

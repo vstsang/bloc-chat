@@ -11,26 +11,27 @@
 		var putUsername = function(username) {
 			$cookies.put('blocChatCurrentUser', username);
 		};
-
-	  	if (!currentUser || currentUser === '') {
+		
+		if (!currentUser || currentUser === '') {
 
 			var modalInstance = $uibModal.open({
 				backdrop: 'static',
 				size: 'sm',
-				templateUrl: 'setUsernameModalContent.html',
+				templateUrl: '/templates/setUsernameModalContent.html',
 				controller: 'UsernameModalInstanceCtrl',
 				controllerAs: '$userctrl'
 			});
 
-	  	}	
-
+		}	
+		
 		return {
 			putUsername: putUsername
 		};
 
 	}
 
-  angular
-    .module('blocChat')
-    .run(['$cookies', '$uibModal', BlocChatCookies]);
+	angular
+		.module('blocChat')
+		.run(['$cookies', '$uibModal', BlocChatCookies])
+		.factory('BlocChatCookies', ['$cookies', '$uibModal', BlocChatCookies]);
 })();

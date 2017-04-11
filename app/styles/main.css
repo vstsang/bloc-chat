@@ -28,6 +28,19 @@ h1 {
 	text-indent: 5px;
 }
 
+table:nth-child(odd) {
+	background: #FFFFFF;
+}
+
+table:nth-child(even) {
+	background: #F1F1F1;
+}
+
+td {
+	width: 10%;
+	padding: 10px;
+}
+
 .messages {
 	margin: 0;
     padding: 0;
@@ -53,17 +66,4 @@ h1 {
 
 .message {
 	color: #797979;
-}
-
-table:nth-child(odd) {
-	background: #FFFFFF;
-}
-
-table:nth-child(even) {
-	background: #F1F1F1;
-}
-
-td {
-	width: 10%;
-	padding: 10px;
 }
