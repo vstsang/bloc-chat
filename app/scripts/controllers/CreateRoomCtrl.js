@@ -2,6 +2,7 @@
 /**
 * @function CreateRoomCtrl
 * @desc Create room modal controller
+* @param {Object} $uibModal service
 */
 	function CreateRoomCtrl($uibModal) {
 		
@@ -24,6 +25,7 @@
 /**
 * @function RoomModalInstanceCtrl
 * @desc Controller for the modal window
+* @param {Object} $uibModalInstance & Room service
 */
 	function RoomModalInstanceCtrl($uibModalInstance, Room) {				
 				

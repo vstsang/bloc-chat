@@ -36,9 +36,16 @@
 		<tr>
 			<td>
 				<span class="username">{{ message.username }}</span>
-				<span class="time">{{ message.sentAt }}</span><br />
+				<span class="time">{{ message.sentAt | date : "shortTime" }}</span><br />
 				<span class="message">{{ message.content }}</span>
 			</td>
 		</tr>
 	</table>
+</div>
+
+<div class="send-box">
+	<form ng-submit="sendMessage.submit(newMessage)" ng-controller="SendMessageCtrl as sendMessage">
+		<input class="box-width" type="text" ng-model="newMessage" placeholder="Write your message here ..." autofocus>
+		<button class="btn" ng-submit="sendMessage.submit(newMessage)">Submit</button>
+	</form>
 </div>

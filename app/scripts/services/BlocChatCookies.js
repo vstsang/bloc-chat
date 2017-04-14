@@ -8,6 +8,7 @@
 		
 		var currentUser = $cookies.get('blocChatCurrentUser');
 
+		/*
 		var putUsername = function(username) {
 			$cookies.put('blocChatCurrentUser', username);
 		};
@@ -23,9 +24,10 @@
 			});
 
 		}	
-		
+*/		
 		return {
-			putUsername: putUsername
+			//putUsername: putUsername
+			currentUser: currentUser
 		};
 
 	}

@@ -50,8 +50,25 @@ td {
 	left: 20%;
 	top: 10px;
 	height: 100%;
-    overflow: auto;
+    overflow: scroll;
 	text-indent: 5px;
+}
+
+.send-box {
+	margin: 0;
+    padding: 0;
+	width: 80%;
+    background-color: #F1F1F1;
+    position: fixed; 
+	bottom: 0px;
+	right: 0px;
+	height: 40px;
+    overflow: auto;
+}
+
+.box-width{
+	width: 600px;
+	overflow: auto;
 }
 
 .username {

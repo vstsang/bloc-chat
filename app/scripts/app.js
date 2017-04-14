@@ -25,8 +25,8 @@
 			}, function() {
 				console.log('something went wrong...');
 			});
-
-		}	
+		
+		}
 	}
 	
 	function config($stateProvider, $locationProvider) {
